@@ -60,6 +60,10 @@ QVescCompleter::QVescCompleter(QObject *parent) :
         addItem("sendAlive()");
         addItem("sendTerminalCmd(cmdStr)");
         addItem("sendTerminalCmdSync(cmdStr)");
+        addItem("enableDirectDQControl()");
+        addItem("disableDirectDQControl()");
+        addItem("setDirectIdReference(current)");
+        addItem("setDirectIqReference(current)");
         addItem("setDutyCycle(duty)");
         addItem("setCurrent(current)");
         addItem("setCurrentBrake(current)");

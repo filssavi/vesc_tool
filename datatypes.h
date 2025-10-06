@@ -1033,6 +1033,9 @@ typedef enum {
     COMM_CAN_UPDATE_BAUD_ALL				= 158,
 
     COMM_MOTOR_ESTOP						= 159,
+    COMM_SET_DIRECT_IDQ_CONTROL             = 160,
+    COMM_SET_DIRECT_ID_REFERENCE            = 161,
+    COMM_SET_DIRECT_IQ_REFERENCE            = 162
 } COMM_PACKET_ID;
 
 // CAN commands

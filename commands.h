@@ -186,6 +186,10 @@ public slots:
     void sendTerminalCmd(QString cmd);
     void sendTerminalCmdSync(QString cmd);
     void setDutyCycle(double dutyCycle);
+    void enableDirectDQControl();
+    void disableDirectDQControl();
+    void setDirectIdReference(double id_current);
+    void setDirectIqReference(double id_current);
     void setCurrent(double current);
     void setCurrentBrake(double current);
     void setRpm(int rpm);

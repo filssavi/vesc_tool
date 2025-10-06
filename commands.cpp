@@ -1316,6 +1316,38 @@ void Commands::setDutyCycle(double dutyCycle)
     emitData(vb);
 }
 
+void Commands::enableDirectDQControl()
+{
+    VByteArray vb;
+    vb.vbAppendInt8(COMM_SET_DIRECT_IDQ_CONTROL);
+    vb.vbAppendInt32(1);
+    emitData(vb);
+}
+
+void Commands::disableDirectDQControl()
+{
+    VByteArray vb;
+    vb.vbAppendInt8(COMM_SET_DIRECT_IDQ_CONTROL);
+    vb.vbAppendInt32(0);
+    emitData(vb);
+}
+
+void Commands::setDirectIdReference(double id_current)
+{
+    VByteArray vb;
+    vb.vbAppendInt8(COMM_SET_DIRECT_ID_REFERENCE);
+    vb.vbAppendDouble32(id_current, 1e3);
+    emitData(vb);
+}
+
+void Commands::setDirectIqReference(double iq_current)
+{
+    VByteArray vb;
+    vb.vbAppendInt8(COMM_SET_DIRECT_IQ_REFERENCE);
+    vb.vbAppendDouble32(iq_current, 1e3);
+    emitData(vb);
+}
+
 void Commands::setCurrent(double current)
 {
     VByteArray vb;
